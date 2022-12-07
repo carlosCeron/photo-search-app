@@ -1,6 +1,7 @@
 import { View, Text, TouchableOpacity, ImageBackground, Pressable } from 'react-native'
 import React from 'react'
 import { cameraBackground } from '../../assets/index'
+import { Theme } from '../Theme/Theme'
 
 const HomeScreen = ({navigation}) => {
   return (
@@ -18,10 +19,10 @@ const HomeScreen = ({navigation}) => {
           justifyContent: 'center',
           alignItems: 'center'
         }}>
-          <Text  style={{fontSize: 36, fontWeight: '400', lineHeight: 45, color: '#FFFFFF', marginBottom: 5}} >PhotoSearch</Text>
-          <Text  style={{fontSize: 16, fontWeight: '400', color: '#FFFFFF', marginBottom: 15}} >Find your best photographer in the city</Text>
+          <Text  style={{...Theme.primaryFont,fontSize: 36, fontWeight: '400', lineHeight: 45, color: '#FFFFFF', marginBottom: 5}} >PhotoSearch</Text>
+          <Text  style={{ ...Theme.regularFontFamily,fontSize: 16, fontWeight: '400', color: '#FFFFFF', marginBottom: 15}} >Find your best photographer in the city</Text>
           <Pressable onPress={() => navigation.navigate('Post')} style={{width: 157, height: 47, borderRadius: 23, backgroundColor: '#AB7E57', justifyContent: 'center', alignItems: 'center'}}>
-            <Text style={{fontSize: 22, fontWeight: '400', lineHeight: 27, color: '#FFFFFF'}}>Search</Text>
+            <Text style={{...Theme.primaryFont,fontSize: 22, fontWeight: '400', color: '#FFFFFF'}}>Search</Text>
           </Pressable>
         </View>
       </ImageBackground>
